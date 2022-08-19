@@ -18,7 +18,7 @@
          <h2>My shopping cart</h2>
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div id="phone-exit" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -27,17 +27,17 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" min="0" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="btn-phone-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="phone-input" type="number" min="0" class="form-control text-center" value="0">
+                           <button id="btn-phone-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <h5>$<span id="price-update">0</span></h5>
+                        <img id="phone-remove" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item">
+               <div id="case-exit" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -45,13 +45,13 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" min="0" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="btn-case-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="case-input" type="number" min="0" class="form-control text-center" value="0">
+                           <button id="btn-case-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <h5>$<span id="case-value">0</span></h5>
+                        <img id="case-remove" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
@@ -66,9 +66,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$<span id="sub-total">0</span></h5>
+                        <h5>$<span id="tax-value">0</span></h5>
+                        <h5>$<span id="total">0</span></h5>
                      </div>
                   </div>
                </div>
@@ -79,6 +79,10 @@
          </div>
       </div>
    </section>
+   <script src="js/phone.js"></script>
+   <script src="js/case.js"></script>
+   <script src="js/utilities.js"></script>
+
 </body>
 
 </html>
